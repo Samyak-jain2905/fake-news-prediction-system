@@ -1,0 +1,21 @@
+dataset:
+  train_csv: ../data/train.csv
+  text_columns:
+    - Headline
+    - Body
+  label_column: Label
+  positive_label: 1
+
+model:
+  max_features: 50000
+  ngram_range: [1, 2]
+  test_size: 0.2
+  random_state: 42
+  class_weight: balanced
+
+artifacts:
+  directory: ../models
+  vectorizer_filename: tfidf_vectorizer.joblib
+  model_filename: fake_news_model.joblib
+  label_encoder_filename: label_encoder.joblib
+
